@@ -9,7 +9,7 @@
 ### Content Importer & Library
 - [x] `[FE]` Text paste → immediate RSVP session (UI + state)
 - [x] `[FE]` User library page (`/library`) — saved articles + completion percentage
-- [ ] `[BE]` Reading position remembered per document (Supabase sync)
+- [>] `[BE]` Reading position remembered per document (Supabase sync)
 
 ### Comprehension Engine
 - [ ] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
