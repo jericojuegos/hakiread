@@ -1,0 +1,23 @@
+# Next.js
+node_modules/
+.next/
+out/
+build/
+
+# Package managers
+.pnpm-debug.log*
+
+# Environment Variables
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Brain files (Specific request)
+.agent/templates/
+.agent/workflows/
