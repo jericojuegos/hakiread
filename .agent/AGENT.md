@@ -4,15 +4,15 @@
 **Web:** Next.js 14+ App Router · TypeScript · Supabase · Vercel AI SDK (multi-provider)  
 **Mobile:** N/A (Phase 1) — React Native / Expo Phase 3  
 **Architecture Pattern:** Pragmatic Feature-Driven Architecture (FDA)  
-**Master Brain:** nextjs-supabase  
-**Last synced:** nextjs-supabase-v1.20 — 2026-03-21  
+**Master Brain:** nextjs-supabase
+**Last synced:** nextjs-supabase-v1.20 — 2026-03-21 ( https://github.com/jericojuegos/bfd-system )
 
 ---
 
 ## 🚦 Project State
 
-**Stage:** `scaffolded`
-**Stage last updated:** `2026-03-21` by `02-scaffold.md`
+**Stage:** `active`
+**Stage last updated:** `2026-03-21` by `03-session-start.md`
 
 | Stage | Meaning | Next Workflow |
 |-------|---------|--------------|

@@ -27,27 +27,27 @@
 *Goal: A user can run the diagnostic, get a Reading Profile, do a daily training session, read content via RSVP, and see their comprehension score.*
 
 ### RSVP Engine
-- [ ] `RSVPPlayer` Client Component — `requestAnimationFrame` loop (never setInterval)
-- [ ] WPM control: 100–1200, steps of 10 and 100
-- [ ] Chunk size control: 1, 2, 3 words per flash
-- [ ] Play / Pause / Rewind (one sentence back) / Fast Forward (one sentence ahead)
-- [ ] Keyboard shortcuts: Space, ←, →, ↑, ↓
-- [ ] Progress indicator: position + estimated time remaining
-- [ ] 60fps performance validation across target devices
+- [x] `RSVPPlayer` Client Component — `requestAnimationFrame` loop (never setInterval)
+- [x] WPM control: 100–1200, steps of 10 and 100
+- [x] Chunk size control: 1, 2, 3 words per flash
+- [x] Play / Pause / Rewind (one sentence back) / Fast Forward (one sentence ahead)
+- [x] Keyboard shortcuts: Space, ←, →, ↑, ↓
+- [x] Progress indicator: position + estimated time remaining
+- [x] 60fps performance validation across target devices
 
 ### Content Importer & Library
 - [ ] Text paste → immediate RSVP session
-- [ ] `POST /api/documents/scrape` — Readability.js URL scraper
-- [ ] Scrape failure → graceful `scrape_failed` response + manual paste fallback
+- [x] `POST /api/documents/scrape` — Readability.js URL scraper
+- [x] Scrape failure → graceful `scrape_failed` response + manual paste fallback
 - [ ] User library page — saved articles + completion percentage
 - [ ] Reading position remembered per document
 
 ### Diagnostic Engine
-- [ ] `lib/reading/bottleneckDetector.ts` — behavioral signal → bottleneck classification
-- [ ] `lib/ai/prompts/diagnostic.ts` — AI profile generation (temperature 0.2)
-- [ ] `POST /api/diagnostic` — full diagnostic flow → upsert `reading_profiles`
-- [ ] Diagnostic UI — calibration passage + comprehension micro-check
-- [ ] Reading Profile display — bottleneck card, baseline WPM, vocabulary percentile
+- [x] `lib/reading/bottleneckDetector.ts` — behavioral signal → bottleneck classification
+- [x] `lib/ai/prompts/diagnostic.ts` — AI profile generation (temperature 0.2)
+- [x] `POST /api/diagnostic` — full diagnostic flow → upsert `reading_profiles`
+- [x] Diagnostic UI — calibration passage + comprehension micro-check
+- [x] Reading Profile display — bottleneck card, baseline WPM, vocabulary percentile
 - [ ] Anonymous diagnostic → localStorage → account creation merge flow
 
 ### Comprehension Engine
