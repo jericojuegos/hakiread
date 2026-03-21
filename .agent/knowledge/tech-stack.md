@@ -221,3 +221,12 @@ export const QUIZ_PASS_SCORE = 0.75;
 export const TARGET_DAU_RATE = 0.40;
 export const XP_BASE_MULTIPLIER = 1.0; // multiplied by comprehension score
 ```
+
+---
+
+## Locked Versions
+
+| Technology | Version |
+|------------|---------|
+| Node.js | v20.19.0 |
+| pnpm | 10.32.1 |

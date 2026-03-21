@@ -11,8 +11,8 @@
 
 ## 🚦 Project State
 
-**Stage:** `not-started`
-**Stage last updated:** `—` by `—`
+**Stage:** `scaffolded`
+**Stage last updated:** `2026-03-21` by `02-scaffold.md`
 
 | Stage | Meaning | Next Workflow |
 |-------|---------|--------------|

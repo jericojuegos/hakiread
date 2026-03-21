@@ -1,0 +1,16 @@
+export const MAX_SESSION_WPM = 1200;
+export const MIN_SESSION_WPM = 100;
+export const WPM_STEP_FINE = 10;
+export const WPM_STEP_COARSE = 100;
+export const CHUNK_SIZES = [1, 2, 3] as const;
+export const MIN_COMPREHENSION_THRESHOLD = 0.60;
+export const OPTIMAL_COMPREHENSION_TARGET = 0.75;
+export const DIAGNOSTIC_PASSAGE_WORDS = 300;
+export const DAILY_SESSION_MINUTES = 10;
+export const COMPREHENSION_QUESTIONS_PER_SESSION = 5;
+export const PROFILE_UPDATE_INTERVAL_DAYS = 14;
+export const MAX_AI_CALLS_FREE_TIER_DAILY = 3;
+export const MAX_DOCUMENT_SIZE_MB = 10;
+export const QUIZ_PASS_SCORE = 0.75;
+export const TARGET_DAU_RATE = 0.40;
+export const XP_BASE_MULTIPLIER = 1.0; // multiplied by comprehension score
