@@ -51,7 +51,7 @@
 - [ ] Anonymous diagnostic → localStorage → account creation merge flow
 
 ### Comprehension Engine
-- [ ] `lib/ai/prompts/comprehension.ts` — multi-level question prompt (temperature 0.0, context-only)
+- [x] `lib/ai/prompts/comprehension.ts` — multi-level question prompt (temperature 0.0, context-only)
 - [ ] `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
 - [ ] Comprehension UI — question display, multiple choice, score reveal
 - [ ] Speed always paired with comprehension score in all result displays
