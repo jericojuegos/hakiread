@@ -13,7 +13,7 @@
 
 ### Comprehension Engine
 - [x] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
-- [>] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
+- [x] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
 - [ ] `[FE]` Comprehension UI — question display, multiple choice, score reveal
 - [ ] `[FE]` Speed always paired with comprehension score in all result displays
 
@@ -55,3 +55,4 @@
 | 2026-03-21 | User library page (`/library`) UI grid and empty states implemented. |
 | 2026-03-21 | Reading position sync — DB migration, Supabase server client, and `/api/progress` route completed. |
 | 2026-03-21 | Comprehension AI prompt (Recall/Inference/Synthesis) built at `src/lib/ai/prompts/comprehension.ts`. |
+| 2026-03-21 | `POST /api/comprehension` endpoint with SHA-256 cache-first lookup and AI generation completed. |
