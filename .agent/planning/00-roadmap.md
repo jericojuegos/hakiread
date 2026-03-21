@@ -54,7 +54,7 @@
 - [x] `lib/ai/prompts/comprehension.ts` — multi-level question prompt (temperature 0.0, context-only)
 - [x] `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
 - [x] Comprehension UI — question display, multiple choice, score reveal
-- [ ] Speed always paired with comprehension score in all result displays
+- [x] Speed always paired with comprehension score in all result displays
 
 ### Daily Training Sessions
 - [ ] `lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile (temperature 0.4)

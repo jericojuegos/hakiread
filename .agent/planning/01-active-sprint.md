@@ -15,7 +15,7 @@
 - [x] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
 - [x] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
 - [x] `[FE]` Comprehension UI — question display, multiple choice, score reveal
-- [>] `[FE]` Speed always paired with comprehension score in all result displays
+- [x] `[FE]` Speed always paired with comprehension score in all result displays
 
 ### Daily Training Sessions
 - [ ] `[BE]` `src/lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile
@@ -37,7 +37,7 @@
 ---
 
 ## 🧪 UAT Checkpoints
-*(No checkpoints yet — added when feature groups complete)*
+- `Comprehension Engine` feature group complete. Needs `/uat-checklist` run.
 
 ---
 
@@ -57,3 +57,4 @@
 | 2026-03-21 | Comprehension AI prompt (Recall/Inference/Synthesis) built at `src/lib/ai/prompts/comprehension.ts`. |
 | 2026-03-21 | `POST /api/comprehension` endpoint with SHA-256 cache-first lookup and AI generation completed. |
 | 2026-03-21 | Comprehension Quiz UI (`ComprehensionQuiz.tsx`) built and integrated into Dashboard flow. |
+| 2026-03-21 | WPM speed successfully threaded into Comprehension results UI. Comprehension Engine feature group complete. |
