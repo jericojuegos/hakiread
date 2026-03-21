@@ -36,7 +36,7 @@
 - [x] 60fps performance validation across target devices
 
 ### Content Importer & Library
-- [ ] Text paste → immediate RSVP session
+- [x] Text paste → immediate RSVP session
 - [x] `POST /api/documents/scrape` — Readability.js URL scraper
 - [x] Scrape failure → graceful `scrape_failed` response + manual paste fallback
 - [ ] User library page — saved articles + completion percentage

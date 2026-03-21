@@ -7,7 +7,7 @@
 ## 🔄 Current Tasks — Phase 1 (Sprint 2)
 
 ### Content Importer & Library
-- [ ] `[FE]` Text paste → immediate RSVP session (UI + state)
+- [x] `[FE]` Text paste → immediate RSVP session (UI + state)
 - [ ] `[FE]` User library page (`/library`) — saved articles + completion percentage
 - [ ] `[BE]` Reading position remembered per document (Supabase sync)
 
@@ -51,3 +51,4 @@
 | Date | Action |
 |------|--------|
 | 2026-03-21 | Phase 1 (Sprint 1 - Core MVP Engines) archived to history. Commencing Sprint 2: Comprehension & Content. |
+| 2026-03-21 | Text Paste -> RSVP Session (`QuickRead` component) implemented and wired to Dashboard. |
