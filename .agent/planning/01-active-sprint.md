@@ -12,7 +12,7 @@
 - [x] `[BE]` Reading position remembered per document (Supabase sync)
 
 ### Comprehension Engine
-- [ ] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
+- [>] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
 - [ ] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
 - [ ] `[FE]` Comprehension UI — question display, multiple choice, score reveal
 - [ ] `[FE]` Speed always paired with comprehension score in all result displays
