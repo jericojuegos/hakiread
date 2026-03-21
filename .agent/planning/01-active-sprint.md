@@ -8,7 +8,7 @@
 
 ### Content Importer & Library
 - [x] `[FE]` Text paste → immediate RSVP session (UI + state)
-- [ ] `[FE]` User library page (`/library`) — saved articles + completion percentage
+- [>] `[FE]` User library page (`/library`) — saved articles + completion percentage
 - [ ] `[BE]` Reading position remembered per document (Supabase sync)
 
 ### Comprehension Engine
