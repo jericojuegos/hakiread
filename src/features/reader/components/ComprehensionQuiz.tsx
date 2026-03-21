@@ -27,10 +27,11 @@ interface Question {
 
 interface ComprehensionQuizProps {
   text: string;
+  wpm: number;
   onFinish: (score: number) => void;
 }
 
-export function ComprehensionQuiz({ text, onFinish }: ComprehensionQuizProps) {
+export function ComprehensionQuiz({ text, wpm, onFinish }: ComprehensionQuizProps) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -136,7 +137,11 @@ export function ComprehensionQuiz({ text, onFinish }: ComprehensionQuizProps) {
             <div className="text-sm font-bold text-slate-400 uppercase tracking-widest mt-2">Comprehension Accuracy</div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-tight">Speed</div>
+              <div className="text-xl font-bold text-blue-600 dark:text-blue-400">{wpm} WPM</div>
+            </div>
             <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
               <div className="text-xs font-bold text-slate-400 uppercase tracking-tight">Questions</div>
               <div className="text-xl font-bold text-slate-900 dark:text-white">{questions.length} Total</div>

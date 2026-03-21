@@ -11,7 +11,7 @@ import {
 
 interface RSVPPlayerProps {
   text: string;
-  onComplete?: () => void;
+  onComplete?: (finalWpm: number) => void;
   initialWpm?: number;
 }
 
@@ -128,7 +128,7 @@ export function RSVPPlayer({ text, onComplete, initialWpm = 300 }: RSVPPlayerPro
       setCurrentIndex(prev => {
         if (prev + 1 >= wordQueue.length) {
           setIsPlaying(false);
-          if (onComplete) onComplete();
+          if (onComplete) onComplete(wpm);
           return prev;
         }
         return prev + 1;

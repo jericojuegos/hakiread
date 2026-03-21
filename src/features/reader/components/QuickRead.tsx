@@ -8,6 +8,7 @@ import { ComprehensionQuiz } from '@/features/reader/components/ComprehensionQui
 export function QuickRead() {
   const [mode, setMode] = useState<'input' | 'reading' | 'quiz'>('input');
   const [text, setText] = useState('');
+  const [finalWpm, setFinalWpm] = useState(0);
 
   const handleStart = () => {
     if (text.trim().length > 0) {
@@ -15,7 +16,8 @@ export function QuickRead() {
     }
   };
 
-  const handleComplete = () => {
+  const handleComplete = (wpm: number) => {
+    setFinalWpm(wpm);
     setMode('quiz');
   };
 
@@ -54,6 +56,7 @@ export function QuickRead() {
       <div className="w-full py-8">
         <ComprehensionQuiz 
           text={text} 
+          wpm={finalWpm}
           onFinish={handleQuizFinish} 
         />
       </div>
