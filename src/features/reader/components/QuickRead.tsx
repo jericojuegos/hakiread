@@ -3,9 +3,10 @@
 import React, { useState } from 'react';
 import { Play, ArrowLeft, FileText, LayoutDashboard } from 'lucide-react';
 import { RSVPPlayer } from '@/features/reader/components/RSVPPlayer';
+import { ComprehensionQuiz } from '@/features/reader/components/ComprehensionQuiz';
 
 export function QuickRead() {
-  const [mode, setMode] = useState<'input' | 'reading'>('input');
+  const [mode, setMode] = useState<'input' | 'reading' | 'quiz'>('input');
   const [text, setText] = useState('');
 
   const handleStart = () => {
@@ -15,8 +16,13 @@ export function QuickRead() {
   };
 
   const handleComplete = () => {
+    setMode('quiz');
+  };
+
+  const handleQuizFinish = (score: number) => {
     setMode('input');
     setText('');
+    // TODO: In a later task, we'll store this score in the user's history
   };
 
   const handleBack = () => {
@@ -39,6 +45,17 @@ export function QuickRead() {
             initialWpm={300} 
           />
         </div>
+      </div>
+    );
+  }
+
+  if (mode === 'quiz') {
+    return (
+      <div className="w-full py-8">
+        <ComprehensionQuiz 
+          text={text} 
+          onFinish={handleQuizFinish} 
+        />
       </div>
     );
   }

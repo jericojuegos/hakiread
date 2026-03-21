@@ -14,7 +14,7 @@
 ### Comprehension Engine
 - [x] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
 - [x] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
-- [ ] `[FE]` Comprehension UI — question display, multiple choice, score reveal
+- [>] `[FE]` Comprehension UI — question display, multiple choice, score reveal
 - [ ] `[FE]` Speed always paired with comprehension score in all result displays
 
 ### Daily Training Sessions
