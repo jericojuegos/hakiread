@@ -40,7 +40,7 @@
 - [x] `POST /api/documents/scrape` — Readability.js URL scraper
 - [x] Scrape failure → graceful `scrape_failed` response + manual paste fallback
 - [x] User library page — saved articles + completion percentage
-- [ ] Reading position remembered per document
+- [x] Reading position remembered per document
 
 ### Diagnostic Engine
 - [x] `lib/reading/bottleneckDetector.ts` — behavioral signal → bottleneck classification

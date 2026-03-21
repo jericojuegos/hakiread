@@ -9,7 +9,7 @@
 ### Content Importer & Library
 - [x] `[FE]` Text paste → immediate RSVP session (UI + state)
 - [x] `[FE]` User library page (`/library`) — saved articles + completion percentage
-- [>] `[BE]` Reading position remembered per document (Supabase sync)
+- [x] `[BE]` Reading position remembered per document (Supabase sync)
 
 ### Comprehension Engine
 - [ ] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
@@ -53,3 +53,4 @@
 | 2026-03-21 | Phase 1 (Sprint 1 - Core MVP Engines) archived to history. Commencing Sprint 2: Comprehension & Content. |
 | 2026-03-21 | Text Paste -> RSVP Session (`QuickRead` component) implemented and wired to Dashboard. |
 | 2026-03-21 | User library page (`/library`) UI grid and empty states implemented. |
+| 2026-03-21 | Reading position sync — DB migration, Supabase server client, and `/api/progress` route completed. |
