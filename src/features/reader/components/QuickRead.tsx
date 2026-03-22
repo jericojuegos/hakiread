@@ -33,11 +33,11 @@ export function QuickRead() {
 
   if (mode === 'reading') {
     return (
-      <div className="w-full flex justify-center py-8">
-        <div className="w-full max-w-4xl relative">
+      <div className="w-full max-w-4xl mx-auto py-8 relative px-4">
+        <div>
           <button 
             onClick={handleBack}
-            className="absolute -top-12 left-0 flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium transition-colors"
+            className="absolute -top-6 left-4 flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium transition-colors"
           >
             <ArrowLeft size={18} /> Back to Dashboard
           </button>
@@ -58,6 +58,7 @@ export function QuickRead() {
           text={text} 
           wpm={finalWpm}
           onFinish={handleQuizFinish} 
+          onCancel={handleBack}
         />
       </div>
     );

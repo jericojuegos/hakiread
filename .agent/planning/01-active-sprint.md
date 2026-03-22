@@ -32,12 +32,13 @@
 ---
 
 ## 🐛 Ad-Hoc / Side Quests
-*(None — use `AD-HOC TASK:` prefix to add)*
+- [x] Fix RSVPPlayer jumping/resizing by giving the text window a fixed height and hidden overflow
+- [x] Fix RSVPPlayer width adjustment by setting a rigid desktop width of 768px
 
 ---
 
 ## 🧪 UAT Checkpoints
-- `Comprehension Engine` feature group complete. Needs `/uat-checklist` run.
+- [x] `Comprehension Engine` feature group complete. `/uat-checklist` passed.
 
 ---
 
@@ -58,3 +59,4 @@
 | 2026-03-21 | `POST /api/comprehension` endpoint with SHA-256 cache-first lookup and AI generation completed. |
 | 2026-03-21 | Comprehension Quiz UI (`ComprehensionQuiz.tsx`) built and integrated into Dashboard flow. |
 | 2026-03-21 | WPM speed successfully threaded into Comprehension results UI. Comprehension Engine feature group complete. |
+| 2026-03-22 | Comprehension Engine UAT (Level 1, 2, 3) successfully passed. |

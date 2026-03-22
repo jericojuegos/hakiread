@@ -127,8 +127,6 @@ export function RSVPPlayer({ text, onComplete, initialWpm = 300 }: RSVPPlayerPro
     if (time - lastUpdateRef.current >= msPerFlash) {
       setCurrentIndex(prev => {
         if (prev + 1 >= wordQueue.length) {
-          setIsPlaying(false);
-          if (onComplete) onComplete(wpm);
           return prev;
         }
         return prev + 1;
@@ -151,6 +149,14 @@ export function RSVPPlayer({ text, onComplete, initialWpm = 300 }: RSVPPlayerPro
     };
   }, [isPlaying, animate]);
 
+  // Handle completion safely outside the state updater
+  useEffect(() => {
+    if (isPlaying && wordQueue.length > 0 && currentIndex >= wordQueue.length - 1) {
+      setIsPlaying(false);
+      if (onComplete) onComplete(wpm);
+    }
+  }, [currentIndex, wordQueue.length, isPlaying, onComplete, wpm]);
+
   // Reset lastUpdateRef on play toggle to prevent skipping chunks
   useEffect(() => {
     if (isPlaying) lastUpdateRef.current = undefined;
@@ -159,12 +165,14 @@ export function RSVPPlayer({ text, onComplete, initialWpm = 300 }: RSVPPlayerPro
   const progressPercent = wordQueue.length > 0 ? (currentIndex / wordQueue.length) * 100 : 0;
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+    <div className="w-full max-w-full md:w-[768px] mx-auto p-6 bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
       
       {/* Player Display */}
-      <div className="flex flex-col items-center justify-center min-h-[300px] mb-8 bg-slate-50 dark:bg-slate-800/50 rounded-lg p-8 relative">
-        <div className="text-4xl md:text-6xl font-medium tracking-tight text-slate-900 dark:text-slate-100 text-center select-none min-h-[1.5em] flex items-center justify-center">
-          {isFinished ? "Session Complete" : currentDisplay}
+      <div className="w-full h-[300px] md:h-[360px] mb-8 bg-slate-50 dark:bg-slate-800/50 rounded-xl p-8 flex items-center justify-center relative overflow-hidden ring-1 ring-inset ring-slate-100 dark:ring-slate-800">
+        <div className="w-full min-w-0 flex items-center justify-center">
+          <span className="text-4xl md:text-6xl font-black tracking-tight text-slate-900 dark:text-slate-100 text-center select-none break-words px-4 leading-normal sm:leading-snug">
+            {isFinished ? "Session Complete" : currentDisplay}
+          </span>
         </div>
         
         {/* Progress Bar */}

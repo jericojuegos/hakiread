@@ -29,9 +29,10 @@ interface ComprehensionQuizProps {
   text: string;
   wpm: number;
   onFinish: (score: number) => void;
+  onCancel?: () => void;
 }
 
-export function ComprehensionQuiz({ text, wpm, onFinish }: ComprehensionQuizProps) {
+export function ComprehensionQuiz({ text, wpm, onFinish, onCancel }: ComprehensionQuizProps) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -109,12 +110,22 @@ export function ComprehensionQuiz({ text, wpm, onFinish }: ComprehensionQuizProp
         <AlertCircle className="w-12 h-12 text-red-600 mx-auto" />
         <h3 className="text-xl font-bold text-red-900 dark:text-red-400">Analysis Failed</h3>
         <p className="text-red-700 dark:text-red-300">{error}</p>
-        <button 
-          onClick={fetchQuestions}
-          className="flex items-center gap-2 px-6 py-2 bg-red-600 text-white rounded-lg mx-auto font-semibold hover:bg-red-700 transition-colors"
-        >
-          <RefreshCw size={18} /> Retry
-        </button>
+        <div className="flex items-center justify-center gap-4 mt-6">
+          <button 
+            onClick={fetchQuestions}
+            className="flex items-center gap-2 px-6 py-2 bg-red-600 text-white rounded-lg font-semibold hover:bg-red-700 transition-colors"
+          >
+            <RefreshCw size={18} /> Retry
+          </button>
+          {onCancel && (
+            <button 
+              onClick={onCancel}
+              className="flex items-center gap-2 px-6 py-2 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 rounded-lg font-semibold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+            >
+              <LayoutDashboard size={18} /> Dashboard
+            </button>
+          )}
+        </div>
       </div>
     );
   }
@@ -159,6 +170,27 @@ export function ComprehensionQuiz({ text, wpm, onFinish }: ComprehensionQuizProp
             <LayoutDashboard size={20} className="group-hover:-translate-x-1 transition-transform" />
             Finish & Return to Dashboard
           </button>
+        </div>
+      </div>
+    );
+  }
+
+  if (questions.length === 0) {
+    return (
+      <div className="max-w-xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 border border-slate-200 dark:border-slate-800 shadow-xl text-center space-y-6 flex flex-col items-center">
+          <AlertCircle className="w-12 h-12 text-slate-400 dark:text-slate-500" />
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white">Analysis Skipped</h3>
+          <p className="text-slate-600 dark:text-slate-400">The AI could not extract factual reading comprehension questions from this passage. It may be too abstract or conversational.</p>
+          
+          {onCancel && (
+            <button 
+              onClick={onCancel}
+              className="mt-4 flex items-center justify-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-xl font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            >
+              <LayoutDashboard size={18} /> Return to Dashboard
+            </button>
+          )}
         </div>
       </div>
     );

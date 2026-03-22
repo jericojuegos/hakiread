@@ -61,8 +61,10 @@ export async function POST(req: NextRequest) {
       .maybeSingle();
 
     if (cached?.questions) {
+      console.log(`[DEBUG] Cache HIT for text hash: ${textHash}`);
       return NextResponse.json({ questions: cached.questions, cached: true });
     }
+    console.log(`[DEBUG] Cache MISS for text hash: ${textHash}. Calling AI...`);
 
     // Generate questions via AI
     const { object: aiResult } = await generateObject({
@@ -75,12 +77,15 @@ export async function POST(req: NextRequest) {
 
     // Cache the generated questions in Supabase
     if (userId) {
+      console.log(`[DEBUG] Caching questions in DB for user ${userId}`);
       await supabase.from('comprehension_sets').insert({
         user_id: userId,
         text_hash: textHash,
         source_text: text.substring(0, 5000),
         questions: aiResult.questions,
       });
+    } else {
+      console.log(`[DEBUG] No userId found, skipping cache insert to DB`);
     }
 
     return NextResponse.json({
