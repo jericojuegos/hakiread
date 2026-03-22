@@ -10,6 +10,9 @@ export interface ReadingProfile {
   baselineComprehension: number;
   vocabularyPercentile?: number;
   lastDiagnosedAt: string;
+  xp?: number;
+  streak?: number;
+  last_session_at?: string;
 }
 
 export interface SessionResult {

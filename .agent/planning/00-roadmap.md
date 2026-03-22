@@ -61,7 +61,7 @@
 - [x] `POST /api/session/generate` — build today's session from profile
 - [x] `POST /api/session/complete` — save results + calculate XP
 - [x] XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
-- [ ] Dashboard — "Today's Session", streak counter, XP display
+- [x] Dashboard — "Today's Session", streak counter, XP display
 
 ---
 

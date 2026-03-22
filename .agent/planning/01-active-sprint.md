@@ -22,7 +22,7 @@
 - [x] `[BE]` `POST /api/session/generate` — build today's session from profile
 - [x] `[BE]` `POST /api/session/complete` — save results + calculate XP
 - [x] `[BE]` XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
-- [ ] `[FE]` Dashboard (`/dashboard`) — "Today's Session", streak counter, XP display
+- [x] `[FE]` Dashboard (`/dashboard`) — "Today's Session", streak counter, XP display
 
 ---
 
@@ -64,3 +64,4 @@
 | 2026-03-22 | \`POST /api/session/generate\` route handler built to stream daily personalized reading sessions with Gemini. |
 | 2026-03-22 | Added \`xp\`, \`streak\`, \`last_session_at\` to \`reading_profiles\` DB schema via MCP migration tool. |
 | 2026-03-22 | \`POST /api/session/complete\` route handler implemented to safely persist session results and evaluate XP math. |
+| 2026-03-22 | Dashboard UI built — displays XP, streak, and entry to Daily Session (DailySessionFlow frontend complete). Daily Training Sessions feature group complete. |

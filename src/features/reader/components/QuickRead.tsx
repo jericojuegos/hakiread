@@ -67,12 +67,11 @@ export function QuickRead() {
   return (
     <div className="w-full max-w-3xl mx-auto space-y-8">
       
-      {/* Header */}
+      {/* Information Header */}
       <div>
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
-          <LayoutDashboard className="text-blue-600" />
-          Dashboard
-        </h1>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-3">
+          Quick Read
+        </h2>
         <p className="text-slate-600 dark:text-slate-400 mt-2 text-lg">
           Paste any text below to instantly begin a reading session.
         </p>
