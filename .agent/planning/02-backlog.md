@@ -14,6 +14,7 @@
 | Audio / TTS reading mode | Phase 3 or later — evaluate demand after V1 |
 | React Native mobile app | Phase 3 — web first |
 | Dynamic pacing (AI speed throttling) | Phase 4 — complex, low MVP priority |
+| Anonymous diagnostic local merge | Deferred pending ADR-006 detail and auth stability |
 
 ---
 

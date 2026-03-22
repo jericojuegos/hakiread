@@ -8,7 +8,7 @@
 
 ---
 
-## [>] Phase 0: Foundation
+## [x] Phase 0: Foundation
 *Goal: Stable scaffold with auth, DB schema, and routing — ready to build features on.*
 
 - [ ] Initialize Next.js 14 (App Router) with TypeScript + Tailwind using `pnpm`
@@ -23,7 +23,7 @@
 
 ---
 
-## Phase 1: MVP — The Core Loop
+## [x] Phase 1: MVP — The Core Loop
 *Goal: A user can run the diagnostic, get a Reading Profile, do a daily training session, read content via RSVP, and see their comprehension score.*
 
 ### RSVP Engine
@@ -48,7 +48,7 @@
 - [x] `POST /api/diagnostic` — full diagnostic flow → upsert `reading_profiles`
 - [x] Diagnostic UI — calibration passage + comprehension micro-check
 - [x] Reading Profile display — bottleneck card, baseline WPM, vocabulary percentile
-- [ ] Anonymous diagnostic → localStorage → account creation merge flow
+- [-] Anonymous diagnostic → localStorage → account creation merge flow
 
 ### Comprehension Engine
 - [x] `lib/ai/prompts/comprehension.ts` — multi-level question prompt (temperature 0.0, context-only)
@@ -65,7 +65,7 @@
 
 ---
 
-## Phase 2: V1 — Polish + Retention
+## [>] Phase 2: V1 — Polish + Retention
 *Goal: Users come back daily. Drift detection keeps them engaged when improvement stalls.*
 
 ### TL;DR Summaries

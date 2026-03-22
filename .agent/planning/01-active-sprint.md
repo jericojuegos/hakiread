@@ -1,45 +1,37 @@
 # 🏃 Active Sprint — HakiRead
 
-> Sprint Focus: Phase 1 (Sprint 2) MVP — Comprehension Engine, Daily Training Sessions, and Library Management.
+> Sprint Focus: Phase 2 (Sprint 3) V1 — Polish & Retention (TL;DR Summaries & Progress Tracking).
 
 ---
 
-## 🔄 Current Tasks — Phase 1 (Sprint 2)
+## 🔄 Current Tasks — Phase 2 (Sprint 3)
 
-### Content Importer & Library
-- [x] `[FE]` Text paste → immediate RSVP session (UI + state)
-- [x] `[FE]` User library page (`/library`) — saved articles + completion percentage
-- [x] `[BE]` Reading position remembered per document (Supabase sync)
+### TL;DR Summaries
+- [ ] `[BE]` `src/lib/ai/prompts/summary.ts` — bulleted summary prompt (temperature 0.0, context-only)
+- [ ] `[BE]` `POST /api/summary` — generate + cache alongside comprehension questions
+- [ ] `[FE]` SummaryCard shown before "Start Reading" button — skippable
 
-### Comprehension Engine
-- [x] `[BE]` `src/lib/ai/prompts/comprehension.ts` — multi-level question prompt
-- [x] `[BE]` `POST /api/comprehension` — generate + cache questions by SHA-256 text hash
-- [x] `[FE]` Comprehension UI — question display, multiple choice, score reveal
-- [x] `[FE]` Speed always paired with comprehension score in all result displays
-
-### Daily Training Sessions
-- [x] `[BE]` `src/lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile
-- [x] `[BE]` `POST /api/session/generate` — build today's session from profile
-- [x] `[BE]` `POST /api/session/complete` — save results + calculate XP
-- [x] `[BE]` XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
-- [x] `[FE]` Dashboard (`/dashboard`) — "Today's Session", streak counter, XP display
+### Progress & Drift Detection
+- [ ] `[BE]` `src/lib/reading/curveAnalyzer.ts` — plateau/drift/bottleneck-shift detection
+- [ ] `[BE]` `src/lib/ai/prompts/progressAnalysis.ts` — coaching summary prompt (temperature 0.4)
+- [ ] `[FE]` Speed/comprehension curve chart — last 30 days
+- [ ] `[BE]` Weekly cron → `progress_snapshots` + notification
+- [ ] `[FE]` Weekly report page
 
 ---
 
-## ⏳ On Deck (Phase 2)
-*(Features to be planned after Phase 1)*
+## ⏳ On Deck (Phase 2 - Continued)
+*(Gamification, Document Import, Vocabulary Builder)*
 
 ---
 
 ## 🐛 Ad-Hoc / Side Quests
-- [x] Fix RSVPPlayer jumping/resizing by giving the text window a fixed height and hidden overflow
-- [x] Fix RSVPPlayer width adjustment by setting a rigid desktop width of 768px
+- [ ] `[FE/BE]` Build Login and Register UI (Supabase Auth) to remove Dev Bypasses.
 
 ---
 
 ## 🧪 UAT Checkpoints
-- [x] `Comprehension Engine` feature group complete. `/uat-checklist` passed.
-- [x] `Daily Training Sessions` feature group complete. `/uat-checklist` passed.
+*(None yet)*
 
 ---
 
@@ -52,18 +44,4 @@
 
 | Date | Action |
 |------|--------|
-| 2026-03-21 | Phase 1 (Sprint 1 - Core MVP Engines) archived to history. Commencing Sprint 2: Comprehension & Content. |
-| 2026-03-21 | Text Paste -> RSVP Session (`QuickRead` component) implemented and wired to Dashboard. |
-| 2026-03-21 | User library page (`/library`) UI grid and empty states implemented. |
-| 2026-03-21 | Reading position sync — DB migration, Supabase server client, and `/api/progress` route completed. |
-| 2026-03-21 | Comprehension AI prompt (Recall/Inference/Synthesis) built at `src/lib/ai/prompts/comprehension.ts`. |
-| 2026-03-21 | `POST /api/comprehension` endpoint with SHA-256 cache-first lookup and AI generation completed. |
-| 2026-03-21 | Comprehension Quiz UI (`ComprehensionQuiz.tsx`) built and integrated into Dashboard flow. |
-| 2026-03-21 | WPM speed successfully threaded into Comprehension results UI. Comprehension Engine feature group complete. |
-| 2026-03-22 | Comprehension Engine UAT (Level 1, 2, 3) successfully passed. |
-| 2026-03-22 | \`sessionBuilder.ts\` prompt created — translates ReadingProfile into localized daily training texts and parameters. |
-| 2026-03-22 | \`POST /api/session/generate\` route handler built to stream daily personalized reading sessions with Gemini. |
-| 2026-03-22 | Added \`xp\`, \`streak\`, \`last_session_at\` to \`reading_profiles\` DB schema via MCP migration tool. |
-| 2026-03-22 | \`POST /api/session/complete\` route handler implemented to safely persist session results and evaluate XP math. |
-| 2026-03-22 | Dashboard UI built — displays XP, streak, and entry to Daily Session (DailySessionFlow frontend complete). Daily Training Sessions feature group complete. |
-| 2026-03-22 | Daily Training Sessions UAT (Level 1, 2, 3) successfully passed. Phase 1 (Sprint 2) MVP core loop is functionally complete. |
+| 2026-03-22 | Phase 1 MVP archived to history. Commencing Phase 2 (Sprint 3): Polish & Retention. |
