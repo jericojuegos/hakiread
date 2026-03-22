@@ -39,6 +39,7 @@
 
 ## 🧪 UAT Checkpoints
 - [x] `Comprehension Engine` feature group complete. `/uat-checklist` passed.
+- [x] `Daily Training Sessions` feature group complete. `/uat-checklist` passed.
 
 ---
 
@@ -65,3 +66,4 @@
 | 2026-03-22 | Added \`xp\`, \`streak\`, \`last_session_at\` to \`reading_profiles\` DB schema via MCP migration tool. |
 | 2026-03-22 | \`POST /api/session/complete\` route handler implemented to safely persist session results and evaluate XP math. |
 | 2026-03-22 | Dashboard UI built — displays XP, streak, and entry to Daily Session (DailySessionFlow frontend complete). Daily Training Sessions feature group complete. |
+| 2026-03-22 | Daily Training Sessions UAT (Level 1, 2, 3) successfully passed. Phase 1 (Sprint 2) MVP core loop is functionally complete. |

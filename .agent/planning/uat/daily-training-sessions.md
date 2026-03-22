@@ -13,7 +13,7 @@
 - [x] The "Today's Session" button correctly routes to `/session/daily` which handles the session playback.
 
 ## Level 3: Human Judgment (User)
-- [ ] Test the Dashboard XP and Streak visual design (does it look good and is it obvious?)
-- [ ] Test the "Today's Session" button to start a session.
-- [ ] Complete a session, answer the comprehension quiz, and verify that the "Session Complete!" summary accurately reflects XP gained.
-- [ ] Return to the Dashboard and verify the total XP has cleanly incremented.
+- [x] Test the Dashboard XP and Streak visual design (does it look good and is it obvious?)
+- [x] Test the "Today's Session" button to start a session.
+- [x] Complete a session, answer the comprehension quiz, and verify that the "Session Complete!" summary accurately reflects XP gained.
+- [x] Return to the Dashboard and verify the total XP has cleanly incremented.
