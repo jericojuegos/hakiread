@@ -26,7 +26,7 @@
 ---
 
 ## 🐛 Ad-Hoc / Side Quests
-- [ ] `[FE/BE]` Build Login and Register UI (Supabase Auth) to remove Dev Bypasses.
+- [>] `[FE/BE]` Build Login and Register UI (Supabase Auth) to remove Dev Bypasses.
 
 ---
 

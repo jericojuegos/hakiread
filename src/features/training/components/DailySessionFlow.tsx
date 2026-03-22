@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { RSVPPlayer } from '@/features/reader/components/RSVPPlayer';
+import { RSVPPlayer } from '@/shared/ui/RSVPPlayer';
 import { ComprehensionQuiz } from '@/features/reader/components/ComprehensionQuiz';
 import { ReadingProfile } from '@/types/reading';
 import { Award, Flame, ArrowLeft, Loader2 } from 'lucide-react';

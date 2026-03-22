@@ -49,15 +49,15 @@ src/
 │       ├── comprehension/route.ts      ← POST: generate questions for a text passage
 │       ├── progress/route.ts           ← GET: fetch speed/comprehension curve data
 │       └── documents/route.ts          ← POST: upload + parse document
-├── components/
-│   ├── features/
-│   │   ├── reader/                     ← RSVP player, text highlighter, speed controls
-│   │   ├── diagnostic/                 ← calibration session UI
-│   │   ├── session/                    ← daily training session UI
-│   │   ├── comprehension/              ← question display + answer UI
-│   │   ├── profile/                    ← Reading Profile card, bottleneck chart
-│   │   └── progress/                   ← speed/comprehension curve chart
-│   └── shared/                         ← Button, Card, Modal, ProgressBar, etc.
+├── features/
+│   ├── reader/                     ← RSVP player, text highlighter, speed controls
+│   ├── diagnostic/                 ← calibration session UI
+│   ├── training/                   ← daily training session UI
+│   ├── comprehension/              ← question display + answer UI
+│   ├── profile/                    ← Reading Profile card, bottleneck chart
+│   └── progress/                   ← speed/comprehension curve chart
+├── shared/
+│   └── ui/                         ← Button, Card, Modal, ProgressBar, etc.
 ├── lib/
 │   ├── ai/
 │   │   ├── client.ts                   ← AIClient factory (reads AI_PROVIDER env var)

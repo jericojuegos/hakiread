@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Play, ArrowLeft, FileText, LayoutDashboard } from 'lucide-react';
-import { RSVPPlayer } from '@/features/reader/components/RSVPPlayer';
+import { RSVPPlayer } from '@/shared/ui/RSVPPlayer';
 import { ComprehensionQuiz } from '@/features/reader/components/ComprehensionQuiz';
 
 export function QuickRead() {

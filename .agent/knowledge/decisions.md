@@ -70,7 +70,7 @@
 **Date:** 2026-03-10
 **Status:** Accepted
 
-**Context:** Same decision as SimpliDate. Needed to decide: separate backend (Express, FastAPI) or Next.js Route Handlers only.
+**Context:** Needed to decide: separate backend (Express, FastAPI) or Next.js Route Handlers only.
 
 **Decision:** Next.js Route Handlers exclusively. No separate backend service for V1.
 

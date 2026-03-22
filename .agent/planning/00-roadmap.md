@@ -13,7 +13,7 @@
 
 - [ ] Initialize Next.js 14 (App Router) with TypeScript + Tailwind using `pnpm`
 - [ ] Set up Supabase project + connect environment variables
-- [ ] Configure Supabase Auth (email/password)
+- [-] Configure Supabase Auth (email/password) (Deferred to Phase 2)
 - [ ] Create all DB tables with RLS policies enabled
 - [ ] Implement `lib/ai/client.ts` abstraction (Anthropic default, OpenAI adapter)
 - [ ] Scaffold all Route Handlers (return 501 until implemented)
@@ -89,7 +89,8 @@
 - [ ] 2-minute flashcard warm-up before reading session
 - [ ] Personal word list per user
 
-### Gamification
+### Auth & Gamification
+- [ ] Configure Supabase Auth (email/password)
 - [ ] Daily streak with grace day (one miss per week allowed)
 - [ ] Personal achievement badges: first 300/500 WPM, 14-day streak, perfect quiz
 - [ ] XP history chart

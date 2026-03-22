@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { RSVPPlayer } from '@/features/reader/components/RSVPPlayer';
+import { RSVPPlayer } from '@/shared/ui/RSVPPlayer';
 import { detectBottleneck, DetectionResult } from '@/lib/reading/bottleneckDetector';
 
 const DIAGNOSTIC_TEXT = `The human brain is a remarkable pattern-recognition machine. When you first learn to read, you sound out every letter, converting visual symbols into auditory signals. This process, known as subvocalization, is essential for beginners but severely limits your maximum reading speed later in life. Most adults continue to "hear" the words in their head as they read, capping their speed at roughly 250 words per minute, which is the average speed of human speech. By utilizing Rapid Serial Visual Presentation, or RSVP, you can eliminate the need for eye movement and suppress subvocalization. This technique flashes words in front of your focal point, forcing your brain to process the visual information directly as concepts, rather than translating them into sounds first. Over time, practicing with RSVP builds new neural pathways, allowing you to comprehend dense material at speeds exceeding 500 words per minute.`;
