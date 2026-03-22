@@ -14,3 +14,4 @@ export const MAX_DOCUMENT_SIZE_MB = 10;
 export const QUIZ_PASS_SCORE = 0.75;
 export const TARGET_DAU_RATE = 0.40;
 export const XP_BASE_MULTIPLIER = 1.0; // multiplied by comprehension score
+export const SESSION_XP_FACTOR = 0.5; // used for daily session XP total formula

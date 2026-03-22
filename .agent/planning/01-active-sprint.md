@@ -20,8 +20,8 @@
 ### Daily Training Sessions
 - [x] `[BE]` `src/lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile
 - [x] `[BE]` `POST /api/session/generate` — build today's session from profile
-- [ ] `[BE]` `POST /api/session/complete` — save results + calculate XP
-- [ ] `[BE]` XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
+- [x] `[BE]` `POST /api/session/complete` — save results + calculate XP
+- [x] `[BE]` XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
 - [ ] `[FE]` Dashboard (`/dashboard`) — "Today's Session", streak counter, XP display
 
 ---
@@ -62,3 +62,5 @@
 | 2026-03-22 | Comprehension Engine UAT (Level 1, 2, 3) successfully passed. |
 | 2026-03-22 | \`sessionBuilder.ts\` prompt created — translates ReadingProfile into localized daily training texts and parameters. |
 | 2026-03-22 | \`POST /api/session/generate\` route handler built to stream daily personalized reading sessions with Gemini. |
+| 2026-03-22 | Added \`xp\`, \`streak\`, \`last_session_at\` to \`reading_profiles\` DB schema via MCP migration tool. |
+| 2026-03-22 | \`POST /api/session/complete\` route handler implemented to safely persist session results and evaluate XP math. |
