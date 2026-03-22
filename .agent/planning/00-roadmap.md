@@ -58,7 +58,7 @@
 
 ### Daily Training Sessions
 - [x] `lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile (temperature 0.4)
-- [ ] `POST /api/session/generate` — build today's session from profile
+- [x] `POST /api/session/generate` — build today's session from profile
 - [ ] `POST /api/session/complete` — save results + calculate XP
 - [ ] XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
 - [ ] Dashboard — "Today's Session", streak counter, XP display
