@@ -57,7 +57,7 @@
 - [x] Speed always paired with comprehension score in all result displays
 
 ### Daily Training Sessions
-- [ ] `lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile (temperature 0.4)
+- [x] `lib/ai/prompts/sessionBuilder.ts` — personalized session from ReadingProfile (temperature 0.4)
 - [ ] `POST /api/session/generate` — build today's session from profile
 - [ ] `POST /api/session/complete` — save results + calculate XP
 - [ ] XP formula: `wordsRead × comprehension_score × SESSION_XP_FACTOR`
